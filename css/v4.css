@@ -143,3 +143,8 @@ p.lead,.nota-precio,.leyenda,.meta,.ayuda,.producto .lead{color:var(--v4-suave)}
 }
 @media (max-width:980px){.pie-original{grid-template-columns:1fr}.pie-cols{grid-template-columns:1fr}}
 @media print{.pie{background:#fff}}
+
+/* Tarjetas de novedades: mismo alto y botones alineados abajo */
+.novedades{align-items:stretch}
+.novedad{display:flex;flex-direction:column}
+.novedad>p:last-child{margin-top:auto;padding-top:14px;margin-bottom:0}
