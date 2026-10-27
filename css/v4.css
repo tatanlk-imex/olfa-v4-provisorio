@@ -1,0 +1,145 @@
+/* V4: diagramación y mejoras de la propuesta inicial (V1) con la línea gráfica del sitio actual www.olfa.cl:
+   fondo negro, títulos amarillos #FFD200, tarjetas oscuras, cabecera con MENU + logo + navegación centrada, pie amarillo con mapa. */
+:root{--v4-fondo:#000;--v4-panel:#111;--v4-panel2:#1b1b1b;--v4-linea:#2a2a2a;--v4-texto:#f2f2f2;--v4-suave:#c9c9c9}
+body{background:#000;color:var(--v4-texto)}
+a{color:var(--amarillo);text-decoration-color:var(--amarillo-osc)}
+a:hover{color:#fff;text-decoration-color:#fff}
+h1,h2{color:var(--amarillo)}
+h3,h4{color:#fff}
+.seccion{background:#000}
+.seccion-gris{background:var(--v4-panel)}
+.seccion-oscura{background:#0a0a0a}
+.seccion-amarilla{background:var(--amarillo);color:#000}
+.seccion-amarilla h1,.seccion-amarilla h2,.seccion-amarilla h3{color:#000}
+.seccion-amarilla a:not(.btn){color:#000}
+.sobretitulo{color:var(--amarillo);border-color:var(--amarillo)}
+.encabezado-seccion p,.titulo-pagina p.lead{color:var(--v4-suave)}
+.titulo-pagina{background:#000;border-bottom:3px solid var(--amarillo)}
+.titulo-pagina h1{color:var(--amarillo)}
+.miga,.miga a{color:var(--v4-suave)}.miga li+li::before{color:#777}
+.articulo{color:var(--v4-texto)}.articulo .fecha{color:var(--v4-suave)}
+:focus-visible{outline-color:var(--amarillo)}
+
+/* Cabecera estilo olfa.cl: MENU + logo a la izquierda, navegación al centro */
+.barra-provisorio{background:#c00}
+.cabecera{background:#000;box-shadow:none;border-bottom:1px solid #1d1d1d}
+.cabecera .contenedor{max-width:1320px;min-height:84px;gap:18px}
+.logo img{height:44px}
+.hb{display:none;width:24px;height:16px;position:relative;border-top:3px solid var(--amarillo);border-bottom:3px solid var(--amarillo)}
+.hb::after{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;background:var(--amarillo)}
+.btn-menu{display:none;border:0;background:#000;color:var(--amarillo);flex-direction:column;align-items:center;gap:4px;font-size:.7rem;letter-spacing:.06em;padding:4px 6px;min-height:44px}
+.nav-principal{margin-left:auto;margin-right:auto}
+.nav-principal ul{gap:6px}
+.nav-principal a{color:#fff;font-weight:500;font-size:.96rem;padding:10px 12px;border-radius:6px}
+.nav-principal a:hover{background:transparent;color:var(--amarillo)}
+.nav-principal a[aria-current="page"]{background:transparent;box-shadow:inset 0 -3px 0 var(--amarillo);color:var(--amarillo)}
+.nav-principal .cta-lista{color:#fff}
+.nav-principal .cta-nav-sec{background:transparent;border:2px solid var(--amarillo);color:var(--amarillo);margin-left:8px;padding:8px 14px}
+.nav-principal .cta-nav-sec:hover{background:var(--amarillo);color:#000}
+.nav-principal .cta-nav{background:var(--amarillo);border:2px solid var(--amarillo);color:#000;margin-left:4px;padding:8px 16px;font-weight:700}
+.nav-principal .cta-nav:hover{background:#fff;border-color:#fff;color:#000}
+
+/* Botones sobre fondo negro */
+.btn-sec{background:transparent;color:#fff;border-color:#fff}
+.btn-sec:hover{background:var(--amarillo);border-color:var(--amarillo);color:#000}
+.btn-negro{background:#000;color:var(--amarillo);border-color:#000}
+.seccion-amarilla .btn-sec,.franja-visita .btn-sec{color:#000;border-color:#000}
+.btn{border-radius:8px}
+.btn-peq{border-radius:8px}
+
+/* Portada: héroe, franja y tarjetas */
+.hero{background:#000}
+.hero .foto{background:#fff;border:4px solid var(--amarillo)}
+.hero p.lead,.confianza{color:var(--v4-suave)}
+.tarjeta{background:var(--v4-panel);border:1px solid var(--v4-linea);color:var(--v4-texto)}
+.tarjeta:hover{box-shadow:0 6px 16px rgba(255,210,0,.2)}
+.tarjeta .img{background:#fff;border-bottom:1px solid var(--v4-linea)}
+.tarjeta-linea .img{background:#fff}
+.tarjeta h3,.tarjeta h3 a{color:#fff;text-decoration:none}
+.tarjeta h3 a:hover{color:var(--amarillo);text-decoration:none}
+.tarjeta .meta,.tarjeta p{color:var(--v4-suave)}
+.tarjeta .btn:not(.btn-sec){color:#000}
+.tag{background:var(--amarillo);color:#000}.tag-gris{background:#333;color:#eee}
+.caja{background:var(--v4-panel);border:1px solid var(--v4-linea);color:var(--v4-texto)}
+.seccion-oscura .caja{background:var(--v4-panel2)}
+.stat{background:var(--v4-panel);color:#fff}.stat b{color:var(--amarillo)}.stat span{color:var(--v4-suave)}
+.novedad{background:var(--amarillo);color:#000;border:0;border-radius:14px}
+.novedad h3,.novedad .sobretitulo{color:#000}.novedad .sobretitulo{border-color:#000}.novedad p{color:#000}
+.novedad .btn{background:#000;border-color:#000;color:var(--amarillo)}
+.novedad .btn:hover{background:#333}
+.novedades-ctl button{background:#000;border-color:var(--amarillo);color:var(--amarillo)}.novedades-ctl button:hover{background:var(--amarillo);color:#000}
+.herramienta{background:var(--v4-panel);border:1px solid var(--v4-linea)}
+.herramienta input,.herramienta select,.campo input,.campo select,.campo textarea,.filtros select,.filtros input{background:#fff;color:#000;border-color:#555}
+.campo label,.herramienta label{color:#fff}.campo .ayuda{color:var(--v4-suave)}
+.chip{background:#000;border-color:#555;color:#fff}.chip:hover{border-color:var(--amarillo)}
+.chip[aria-pressed="true"]{background:var(--amarillo);border-color:var(--amarillo);color:#000}
+.contador{color:var(--v4-suave)}
+.chips-compat a{border-color:var(--amarillo);color:var(--amarillo)}.chips-compat a:hover{background:var(--amarillo);color:#000}
+
+/* Tablas, preguntas frecuentes, notas */
+.tabla-envoltorio{background:var(--v4-panel);border-color:var(--v4-linea)}
+th{background:var(--amarillo);color:#000}
+td{border-bottom-color:var(--v4-linea);color:var(--v4-texto)}
+tbody tr:nth-child(even){background:#161616}
+table.ficha th{background:#1b1b1b;color:var(--amarillo)}
+details{background:var(--v4-panel);border-color:var(--v4-linea)}
+details .resp{color:var(--v4-suave)}
+summary{color:#fff}
+.nota{background:#1a1700;border-color:#6b5a00;color:var(--v4-texto)}
+.jerarquia li{background:var(--v4-panel);border-color:var(--v4-linea);border-left-color:var(--amarillo)}
+.jerarquia li::before{background:var(--amarillo);color:#000}
+.jerarquia p{color:var(--v4-suave)}
+.autodiag .pregunta{background:var(--v4-panel);border-color:var(--v4-linea)}
+.autodiag label.op{border-color:#666;color:#fff}
+.autodiag label.op:has(input:checked){background:var(--amarillo);border-color:var(--amarillo);color:#000}
+.resultado{background:#1a1700;border-color:var(--amarillo);color:var(--v4-texto)}
+.resultado.bien{background:#0e2415;border-color:#2e9e57}
+.aviso-ok{background:#0e2415;color:#a8e6bd}.aviso-error{background:#2a0e0e;color:#f3b0b0}
+.dato{background:var(--v4-panel2)}.dato b{color:var(--v4-suave)}
+.caja-cotizar{background:#1a1700;border-color:var(--amarillo)}
+.galeria .principal,.galeria .miniaturas button{background:#fff;border-color:var(--v4-linea)}
+.galeria .miniaturas button[aria-current="true"]{border-color:var(--amarillo);box-shadow:0 0 0 2px var(--amarillo)}
+.producto h1{color:#fff}
+.mensaje-prueba{background:#1a1700;color:var(--amarillo)}
+
+/* Pie estilo olfa.cl: fondo amarillo, logo negro, contacto con íconos y mapa */
+.pie{background:var(--amarillo);color:#000;padding:50px 0 24px}
+.pie a{color:#000;text-decoration:underline;text-decoration-color:rgba(0,0,0,.4)}
+.pie a:hover{text-decoration-color:#000}
+.pie h3{color:#000;border-bottom:3px solid #000;display:inline-block;padding-bottom:2px}
+.pie .legal{border-top:1px solid rgba(0,0,0,.3);color:#222}
+.pie-original{display:grid;grid-template-columns:1.1fr 1fr 1.2fr;gap:34px;align-items:start;margin-bottom:34px}
+.pie-original .pie-logo img{height:50px;width:auto;margin-bottom:14px}
+.pie-original ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 18px}
+.pie-original .redes{display:flex;gap:12px;margin-top:14px}
+.pie-original .redes a{display:inline-flex;width:40px;height:40px;border-radius:50%;background:#000;color:var(--amarillo);align-items:center;justify-content:center;text-decoration:none;font-weight:800;font-size:.8rem}
+.pie-original .contacto-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+.pie-original .contacto-item img{width:24px;height:24px;flex:none}
+.pie-mapa{border-radius:12px;overflow:hidden;height:240px;border:3px solid #000}
+.pie-mapa iframe{width:100%;height:100%;border:0}
+.pie-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;border-top:1px solid rgba(0,0,0,.3);padding-top:26px}
+.pie-cols ul{list-style:none;margin:0;padding:0;columns:2}.pie-cols li{margin-bottom:8px;break-inside:avoid}
+
+p.lead,.nota-precio,.leyenda,.meta,.ayuda,.producto .lead{color:var(--v4-suave)}
+.nota-precio{border-color:#444}
+.seccion-amarilla p.lead,.seccion-amarilla .meta{color:#000}
+
+/* Asistente y barra móvil */
+.asesor-panel{background:#111;color:#fff}
+.asesor-msgs{background:#0a0a0a}
+.asesor-b.bot{background:#1b1b1b;border-color:#333;color:#fff}
+.asesor-ctl{border-top-color:#333;background:#111}
+.asesor-op{background:#000;border-color:var(--amarillo);color:var(--amarillo)}.asesor-op:hover{background:var(--amarillo);color:#000}
+.asesor-saltar{background:#333;color:#fff}
+.asesor-acepto{color:var(--v4-suave)}
+
+@media (max-width:1100px){
+  .btn-menu{display:flex;margin-left:0;order:-1}
+  .hb{display:block}
+  .cabecera .contenedor{justify-content:flex-start}
+  .logo{margin:0 auto 0 0}
+  .nav-principal{background:#000;border-bottom:4px solid var(--amarillo);margin:0}
+  .nav-principal .cta-nav-sec,.nav-principal .cta-nav{margin:8px 0 0;text-align:center}
+}
+@media (max-width:980px){.pie-original{grid-template-columns:1fr}.pie-cols{grid-template-columns:1fr}}
+@media print{.pie{background:#fff}}
