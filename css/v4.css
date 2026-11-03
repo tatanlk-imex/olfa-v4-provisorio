@@ -24,7 +24,8 @@ h3,h4{color:#fff}
 .barra-provisorio{background:#c00}
 .cabecera{background:#000;box-shadow:none;border-bottom:1px solid #1d1d1d}
 .cabecera .contenedor{max-width:1320px;min-height:84px;gap:18px}
-.logo img{height:44px}
+.logo img{height:64px;width:auto}
+@media (max-width:900px){.logo img{height:52px}}
 .hb{display:none;width:24px;height:16px;position:relative;border-top:3px solid var(--amarillo);border-bottom:3px solid var(--amarillo)}
 .hb::after{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;background:var(--amarillo)}
 .btn-menu{display:none;border:0;background:#000;color:var(--amarillo);flex-direction:column;align-items:center;gap:4px;font-size:.7rem;letter-spacing:.06em;padding:4px 6px;min-height:44px}
